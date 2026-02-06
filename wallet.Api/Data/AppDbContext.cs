@@ -1,10 +1,12 @@
 using Microsoft.EntityFrameworkCore;
-namespace Wallet.Api.Entities;
+using Wallet.Api.Entities;
+
+namespace wallet.Api.Data;
 
 
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
-    public DbSet<Wallet> Wallets { get; set; }
+    public DbSet<Wallet.Api.Entities.Wallet> Wallets { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
 }
