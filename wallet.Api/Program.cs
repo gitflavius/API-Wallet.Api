@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using wallet.Api.Interfaces;
 using wallet.Api.Services;
-using Wallet.Api.Entities;
+using wallet.Api.Repositories;
+using wallet.Api.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
+
+builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+builder.Services.AddScoped<IWalletService, WalletService>();
 
 
 var app = builder.Build();
@@ -37,6 +42,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 app.MapGet("/", () => "API Wallet rodando");
 
 app.Run();
