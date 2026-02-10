@@ -1,4 +1,4 @@
-# Wallet API
+# Wallet API ## Status: 🚧🚧🚧 Em desenvolvimento
 
 Projeto em desenvolvimento para gerenciamento de carteiras digitais 
 
@@ -10,10 +10,12 @@ Projeto em desenvolvimento para gerenciamento de carteiras digitais
 - Docker
 - Docker Compose
 
-## Status
-🚧 Em desenvolvimento
+
 
 ## Próximos passos
-- Implementar banco de dados
+- Implementar banco de dados - DONE
+
 - Criar endpoints CRUD
+
+
 - Desenvolver frontend
