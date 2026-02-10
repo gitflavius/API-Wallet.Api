@@ -16,6 +16,6 @@ Projeto em desenvolvimento para gerenciamento de carteiras digitais
 - Implementar banco de dados - DONE
 
 - Criar endpoints CRUD
-
+https://youtu.be/A5SUNIBzGac
 
 - Desenvolver frontend
